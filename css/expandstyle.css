@@ -53,7 +53,7 @@
 }
 
 .accordion .handle label:before {
-  content: "↓";
+  content: "+";
   display: inline-block;
   margin-right: 10px;
   font-size: 1.8em;
@@ -64,7 +64,8 @@
 }
 
 .accordion > input[name="collapse"]:checked ~ .handle label:before {
-    transform: rotate(180deg);
+    content: "-";
+    transform: rotate(540deg);
     transform-origin: center;
     transition: 0.4s;
 }
