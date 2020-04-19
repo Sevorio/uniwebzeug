@@ -53,7 +53,7 @@
 }
 
 .accordion .handle label:before {
-  content: "\2B9F";
+  content: "\#11167";
   display: inline-block;
   margin-right: 10px;
   font-size: 1.8em;
