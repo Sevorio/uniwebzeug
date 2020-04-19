@@ -1,0 +1,74 @@
+.accordion > input[name="collapse"] {
+  display: none;
+}
+.accordion label,
+.accordion .contentbox{
+ width:60%;
+ min-width: 400px;
+ margin: 0 auto;
+ }
+.accordion .contentbox {
+  box-sizing: border-box;
+  padding: 0px 15px 5px;
+  background: #eef;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+  border-top:0;
+}
+
+.accordion > input[name="collapse"]:checked ~ .contentbox {
+  max-height: 500px;
+  transition: max-height 0.5s;
+}
+
+.accordion label {
+  display: block;
+}
+
+.accordion {
+  margin-bottom: 1em;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 16px;
+  
+}
+
+.accordion label {
+  color: #fff;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 10px;
+  background: #b0100c;
+  user-select: none;
+  
+}
+
+.accordion > input[name="collapse"]:checked ~ .handle label {
+  background: #252525;
+}
+
+.accordion .handle label:before {
+  content: "\2B9F";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.8em;
+  line-height: 1em;
+  vertical-align: middle;
+  transition: 0.4s;
+  
+}
+
+.accordion > input[name="collapse"]:checked ~ .handle label:before {
+    transform: rotate(180deg);
+    transform-origin: center;
+    transition: 0.4s;
+}
+
+.accordion p:last-child {
+  margin-bottom: 0;
+}
